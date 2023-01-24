@@ -8,5 +8,6 @@ public interface ToyotaRepository extends JpaRepository<Toyota, Long>{
 	
 	void deleteToyotaById(Long id);
 	Optional<Toyota> findToyotaById(Long id);
+	long count();
 
 }

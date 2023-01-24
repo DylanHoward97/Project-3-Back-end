@@ -7,6 +7,6 @@ public interface PorscheRepository extends JpaRepository<Porsche, Long> {
 	
 	void deletePorscheById(Long id);
 	Optional<Porsche> findPorscheById(Long id);
-
+	long count();
 
 }

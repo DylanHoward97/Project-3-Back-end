@@ -20,7 +20,7 @@ public class PorscheService {
 	}
 	
 	public Porsche addPorsche(Porsche porsche) {
-		if(porscheRepo.count() > 99) {
+		if(porscheRepo.count() > 24) {
 			new ItemNotFoundException ("Out of capacity");
 		}else 
 		return porscheRepo.save(porsche);

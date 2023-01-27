@@ -18,7 +18,7 @@ private final MercedesRepository mercedesRepo;
 	}
 	
 	public Mercedes addMercedes(Mercedes mercedes) {
-		if(mercedesRepo.count() > 3) {
+		if(mercedesRepo.count() > 29) {
 			System.out.print("Out of capacity ");
 		}else 
 		return mercedesRepo.save(mercedes);

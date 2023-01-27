@@ -18,7 +18,7 @@ private final HondaRepository hondaRepo;
 	}
 	
 	public Honda addHonda(Honda honda) {
-		if(hondaRepo.count() > 1) {
+		if(hondaRepo.count() > 19) {
 			new ItemNotFoundException ("Out of capacity");
 		}else 
 		return hondaRepo.save(honda);

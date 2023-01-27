@@ -19,7 +19,7 @@ private final DodgeRepository dodgeRepo;
 	}
 	
 	public Dodge addDodge(Dodge dodge) {
-		if(dodgeRepo.count() > 99) {
+		if(dodgeRepo.count() > 39) {
 			new ItemNotFoundException ("Out of capacity");
 		}else 
 		return dodgeRepo.save(dodge);

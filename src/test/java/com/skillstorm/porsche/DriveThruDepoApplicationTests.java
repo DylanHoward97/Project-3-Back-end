@@ -3,7 +3,9 @@ package com.skillstorm.porsche;
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
-@SpringBootTest
+import com.driveThruDepo.DriveThruDepoApplication;
+
+@SpringBootTest(classes = DriveThruDepoApplication.class)
 class DriveThruDepoApplicationTests {
 
 	@Test

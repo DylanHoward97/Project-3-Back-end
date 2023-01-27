@@ -7,5 +7,7 @@ public interface MercedesRepository extends JpaRepository<Mercedes, Long>{
 	
 	void deleteMercedesById(Long id);
 	Optional<Mercedes> findMercedesById(Long id);
+	
+	long count();
 
 }

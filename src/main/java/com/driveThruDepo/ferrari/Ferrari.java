@@ -1,7 +1,5 @@
 package com.driveThruDepo.ferrari;
 
-import java.util.Date;
-
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
@@ -25,12 +23,12 @@ public class Ferrari {
 	private String status;
 	private double mileage;
 	private int numberOfCars;
-	private Date dateOfInventory;
+	private String dateOfInventory;
 	
 	public Ferrari() {}
 
 	public Ferrari(String image, String model, String year, String color, double price, String status, double mileage,
-			int numberOfCars, Date dateOfInventory) {
+			int numberOfCars, String dateOfInventory) {
 		super();
 		this.image = image;
 		this.model = model;
@@ -115,11 +113,11 @@ public class Ferrari {
 		this.numberOfCars = numberOfCars;
 	}
 
-	public Date getDateOfInventory() {
+	public String getDateOfInventory() {
 		return dateOfInventory;
 	}
 
-	public void setDateOfInventory(Date dateOfInventory) {
+	public void setDateOfInventory(String dateOfInventory) {
 		this.dateOfInventory = dateOfInventory;
 	}
 

@@ -18,7 +18,11 @@ public class FerrariService {
 	}
 	
 	public Ferrari addFerrari(Ferrari ferrari) {
+		if(ferrariRepo.count() > 9) {
+			new ItemNotFoundException ("Out of capacity");
+		}else 
 		return ferrariRepo.save(ferrari);
+		return ferrari;	
 	}
 	
 	public List<Ferrari> findAllFerrari(){

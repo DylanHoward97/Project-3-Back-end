@@ -7,5 +7,6 @@ public interface FerrariRepository extends JpaRepository<Ferrari, Long>{
 	
 	void deleteFerrariById(Long id);
 	Optional<Ferrari> findFerrariById(Long id);
+	long count();
 
 }

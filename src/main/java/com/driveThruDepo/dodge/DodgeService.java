@@ -3,6 +3,7 @@ package com.driveThruDepo.dodge;
 import java.util.List;
 import javax.transaction.Transactional;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.data.jpa.repository.Query;
 import org.springframework.stereotype.Service;
 import com.driveThruDepo.ItemNotFoundException;
 
@@ -18,7 +19,11 @@ private final DodgeRepository dodgeRepo;
 	}
 	
 	public Dodge addDodge(Dodge dodge) {
+		if(dodgeRepo.count() > 39) {
+			new ItemNotFoundException ("Out of capacity");
+		}else 
 		return dodgeRepo.save(dodge);
+		return dodge;	
 	}
 	
 	public List<Dodge> findAllDodge(){

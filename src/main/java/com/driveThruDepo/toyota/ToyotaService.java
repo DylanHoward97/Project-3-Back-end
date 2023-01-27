@@ -19,7 +19,11 @@ public class ToyotaService {
 		}
 		
 		public Toyota addToyota(Toyota toyota) {
+			if(toyotaRepo.count() > 49) {
+				new ItemNotFoundException ("Out of capacity");
+			}else 
 			return toyotaRepo.save(toyota);
+			return toyota;	
 		}
 		
 		public List<Toyota> findAllToyota(){
